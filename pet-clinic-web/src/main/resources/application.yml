@@ -10,10 +10,8 @@ spring:
   h2:
     console:
       enabled: true
-
-  config:
-    activate:
-      on-profile: "springdatajpa"
-
   jpa:
     database-platform: org.hibernate.dialect.H2Dialect
+
+  profiles:
+    active: "springdatajpa"
