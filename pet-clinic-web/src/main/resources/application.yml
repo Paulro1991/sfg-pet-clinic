@@ -2,3 +2,18 @@
 spring:
   messages:
     basename: messages/messages
+
+  datasource:
+    driver-class-name: org.h2.Driver
+    username: sa
+    url: jdbc:h2:mem:testdb
+  h2:
+    console:
+      enabled: true
+
+  config:
+    activate:
+      on-profile: "springdatajpa"
+
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
